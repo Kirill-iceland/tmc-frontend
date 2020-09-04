@@ -30,7 +30,7 @@ A short and simple permissive license with conditions only requiring preservatio
     source code.</p>
 ###### MIT © Jack Baude
 
-##[The Backend API]((https://github.com/LinoBigatti/tmc-wiki-backend))
+## [The Backend API]((https://github.com/LinoBigatti/tmc-wiki-backend))
 
 The project space for this is too large to fit in one reposoirty and one code base, so we split
 it into two. The Backend API is what drives the site and what handels everything. 
