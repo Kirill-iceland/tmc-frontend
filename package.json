@@ -45,6 +45,7 @@
     "universal-cookie": "^4.0.3"
   },
   "scripts": {
+    "dev": "nodemon index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
