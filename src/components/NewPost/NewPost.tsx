@@ -67,6 +67,7 @@ const NewPost = () => {
                 "Access-Control-Allow-Methods": "POST",
                 "Access-Control-Allow-Headers": "Content-Type, Authorization"
             }
+
         })
             // .then(r => window.location.href = r.url)
             .then(() => {
@@ -355,7 +356,7 @@ const Element = props => {
             return <ImageElement {...props} />
         case 'link':
             return (
-                <a {...attributes} href={element.url}>
+                <a {...attributes} href={element.url} target={"_blank"}>
                     {children}
                 </a>
             )

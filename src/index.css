@@ -1,5 +1,6 @@
 /*
 Color pallet: https://flatuicolors.com/palette/defo
+https://colorhunt.co/palette/150168
 */
 /*
 TODO organize this
@@ -28,7 +29,7 @@ html {
     /*default box shadow color*/
     --global-box-shadow-color: rgba(44, 62, 80, 0.5);
     /*default colors*/
-    --global-color-primary: #34495e;
+    --global-color-primary: #0275d8;
     --global-color-secondary: #2c3e50;
     --global-color-tertiary: #187EF7;
     /*Jumbotron background*/
@@ -44,16 +45,16 @@ html[data-theme='dark'] {
     --global-text-color-primary: #ffffff;
     --global-text-color-secondary: #000000;
     /*default background colors*/
-    --global-bg-color-primary: #121212;
-    --global-bg-color-secondary: #2d3436;
+    --global-bg-color-primary: #17223b;
+    --global-bg-color-secondary: #263859;
     /*default box shadow color*/
     --global-box-shadow-color: rgb(45, 52, 54, 0.5);
     /*default colors*/
-    --global-color-primary: #34495e;
-    --global-color-secondary: #2c3e50;
+    --global-color-primary: #ff6768;
+    --global-color-secondary: #6b778d;
     --global-color-tertiary: #187EF7;
     /*Jumbotron background*/
-    --global-jumbo-bg-color: #2d3436;
+    --global-jumbo-bg-color: #263859;
 
 
 }
@@ -76,6 +77,22 @@ svg {
 }
 hr {
     background: var(--global-text-color-primary)!important;
+}
+.btn{
+    background: var(--global-color-primary)!important;
+    color: white!important;
+    border: none!important;
+}
+#book-image {
+    min-height: 3vw;
+    min-width: 3vw;
+    max-height: 10vh;
+    max-width: 10vh;
+    opacity: 100%;
+    /*border: 3px solid white;*/
+    /*padding: 7px;*/
+    /*border-radius: 50%;*/
+    /*box-shadow: 5px 5px 5px var(--global-box-shadow-color);*/
 }
 .home {
     margin-bottom: 5vw;
@@ -134,28 +151,20 @@ a.nav-link {
 }
 
 .jumbo-link {
-    margin-left: 1rem;
-    border: var(--global-text-color-primary) 1px solid!important;
-    /*Override bootstrap color of the button*/
-    background: var(--global-bg-color-secondary) !important;
-    color: white !important;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
-
 .post-link-jumbo-container {
-    padding: 5%;
-
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .post-link-jumbo {
-    width: 33%;
-    border-bottom: white 1px solid;
-    margin-bottom: 4px;
+    width: 100%;
     padding-bottom: 1vh;
     text-decoration: none;
+    /*margin-left: 1vw;*/
 }
-.youtube-video {
-    height: 400px!important;
-    width: 100%;
-}
+
 .git-commits svg {
     color: var(--global-text-color-primary);
 }
@@ -173,7 +182,17 @@ a.nav-link {
 .post-link-jumbo a:hover {
     text-decoration: none;
 }
-
+.file-input{
+    display: none;
+}
+.file-input-button {
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+}
+.table, .table svg {
+    color: var(--global-text-color-primary)!important;
+    /*background: var(--global-bg-color-secondary);*/
+}
 .page-footer {
     background: var(--global-bg-color-secondary);
     box-shadow: 0 0.2vw 1vw var(--global-box-shadow-color);
@@ -193,44 +212,6 @@ a.nav-link {
 
 .footer-icon {
     margin: 1rem 1rem;
-}
-
-/*TODO fix this so same class for all the buttons and different classes for the size of the button*/
-.inline-style-options input {
-    width: 20%;
-    margin-bottom: 1vh;
-    padding: 1px;
-    background: var(--global-bg-color-secondary);
-    box-shadow: 0 4px 4px var(--global-box-shadow-color);
-    border: none;
-    color: white;
-}
-
-.block-style-options input {
-    width: 16.66%;
-    margin-bottom: 1vh;
-    background: var(--global-bg-color-secondary);
-    box-shadow: 0 4px 4px var(--global-box-shadow-color);
-    border: none;
-    color: white;
-}
-
-.inline-style-options input:hover {
-    background: var(--global-color-secondary);
-}
-
-.block-style-options input:hover {
-    background: var(--global-color-secondary);
-}
-
-.block-style-options input[type="button"].active {
-    background-color: var(--global-color-tertiary);
-    border-color: transparent;
-}
-
-.inline-style-options input[type="button"].active {
-    background-color: var(--global-color-tertiary);
-    border-color: transparent;
 }
 
 .spacing-block {
@@ -255,12 +236,6 @@ a.nav-link {
 
 #description-input {
     width: 100%;
-}
-
-.btn {
-    margin-top: 2.5vw;
-    margin-bottom: 5vw;
-
 }
 
 .submit-post input::placeholder {
@@ -336,7 +311,24 @@ a.nav-link {
     animation-duration: 0.7s;
     animation-timing-function: ease-in-out;
 }
+
+
+.slideInDown {
+    animation-name: slideInDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
 /*Animation keyframes*/
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -300%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
 @keyframes slide-in {
     from {
         opacity: 0;

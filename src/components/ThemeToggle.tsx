@@ -1,9 +1,8 @@
-import React, {memo, useEffect, useState} from "react"
+import React, {memo, useState} from "react"
 import Cookies from 'universal-cookie';
-import {faAlignJustify, faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
+import {faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const ThemeToggle = () => {
-    const cookies = new Cookies();
     const [themeState, setThemeState] = useState(localStorage.getItem('mode'))
     const toggleTheme = () => {
         const theme = localStorage.getItem('mode') === 'dark' ? 'light' : 'dark';
@@ -19,10 +18,9 @@ const ThemeToggle = () => {
                        defaultChecked={((localStorage.getItem('mode')) === "dark")}/>
                 {/*If the checkbox is checked, dark, render the moon, else render the sun if it is in light mode*/}
                 {((localStorage.getItem('mode')) === "dark")
-                    ? <FontAwesomeIcon icon={faMoon}/>
-                    : <FontAwesomeIcon icon={faSun}/>
+                    ?<FontAwesomeIcon icon={faMoon} size={"2x"}/>
+                    :<FontAwesomeIcon icon={faSun}/>
                 }
-                <span className="slider round"/>
             </label>
             <div>
 

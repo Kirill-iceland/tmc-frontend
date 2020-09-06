@@ -16,7 +16,6 @@ import {withHistory} from 'slate-history'
 import {css} from 'emotion'
 
 import {Button, Icon, Toolbar} from '../RichUtils'
-import {convertFromRaw, EditorState} from "draft-js";
 import {useParams} from "react-router";
 
 
@@ -400,7 +399,7 @@ const Element = props => {
             return <ImageElement {...props} />
         case 'link':
             return (
-                <a {...attributes} href={element.url}>
+                <a {...attributes} href={element.url} target={"_blank"} >
                     {children}
                 </a>
             )
