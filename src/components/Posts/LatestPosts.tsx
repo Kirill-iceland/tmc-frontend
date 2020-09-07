@@ -21,9 +21,9 @@ const LatestPosts = () => {
         await setMetadata(await response.json());
     };
     const postLink = useMemo(() => metadata.map(
-        ({title, id, tags, last_edited, description}) => (
+        ({title, desc, tags, last_edited, body, _id}) => (
             <div className={"post-link-jumbo slideInDown"}>
-                <div className={"post-link-title"}><a href={"/render-post/" + id}><h4 className={"link"}>{title}</h4>
+                <div className={"post-link-title"}><a href={"/render-post/" + _id}><h4 className={"link"}>{title}</h4>
                 </a></div>
                 <div>Last updated: {last_edited}</div>
             </div>

@@ -62,7 +62,7 @@ const EditPost = () => {
         const data = await response.json()
         console.log(data)
         await setTitle(data.title)
-        await setDescription(data.description)
+        await setDescription(data.desc)
         await setTags(data.tags)
         await setValue(JSON.parse(data.body))
     }

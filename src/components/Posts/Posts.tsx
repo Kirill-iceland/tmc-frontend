@@ -24,11 +24,11 @@ const Posts = () => {
         await setMetadata(data);
     };
     const postLink = useMemo(() => metadata.map(
-        ({title, id, tags, last_edited, description}) => (
+        ({title, desc, tags, last_edited, body, _id}) => (
             <div className={"post-link slide"}>
-                <div className={"post-link-title"}><a href={"/render-post/" + id}><h1 className={"link"}>{title}</h1>
+                <div className={"post-link-title"}><a href={"/render-post/" + _id}><h1 className={"link"}>{title}</h1>
                 </a></div>
-                <div>About: {description}</div>
+                <div>About: {desc}</div>
                 <div>Tags: {tags}</div>
                 <div>Last updated: {last_edited}</div>
             </div>
